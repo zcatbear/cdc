@@ -1,0 +1,11 @@
+---
+- hosts: cdc
+  tasks:
+    - name: Turning on epel
+      yum: 
+        state: installed
+        pkg: epel-release
+    - name: Installing ansible
+      yum: state=installed pkg=ansible
+
+
